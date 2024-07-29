@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "datatables.net-dt": "",
+    "datatables.net-responsive-dt": "",
+    "datatables.net-searchpanes-dt": "",
+    "express": "^4.19.2",
+    "html2canvas": "^1.4.1",
+    "jquery": "",
+    "jspdf": "^2.5.1",
+    "jspdf-html2canvas": "^1.5.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.9.3",
+    "urlscan": "^0.0.4"
+  }
+}

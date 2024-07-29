@@ -1,0 +1,70 @@
+#myTable_wrapper {
+    background-color: var(--primary-color);
+    padding: 20px;
+
+    border-radius: var(--radius-normal);
+}
+
+td, #myTable,
+table.dataTable > thead > tr > th {
+    border: 1px solid var(--datatable-border-color) !important;
+}
+
+.dt-layout-row, span {
+    color: var(--text-color);
+}
+
+.dt-column-title {
+    color: var(--title-color);
+}
+
+.dt-start, .dt-end{
+    border: none;
+}
+
+/* Options ist das bei entries per page */
+option {
+    color: black;
+}
+
+div.dt-container .dt-paging .dt-paging-button {
+    background-color: var(--button-color) !important;
+}
+
+.dt-paging-button:hover {
+    background-color: var(--button-hover) !important;
+}
+
+/* For the page number at data table*/
+.dt-paging {
+    color: black !important;
+}
+
+.dt-input {
+    background-color: var(--button-color) !important;
+    color: var(--button-text-color) !important;
+}
+
+/* Makes table horizontically scrollable */
+.dt-layout-table {
+    overflow-x: auto;
+}
+
+table.dataTable > thead > tr > th:first-child,
+td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: 10;
+}
+
+table.dataTable > thead > tr > th:nth-child(2),
+td:nth-child(2) {
+    position: sticky;
+    background-color: var(--primary-color);
+    z-index: 10;
+}
+
+table.dataTable > thead > tr > th:nth-child(2) {
+    color: white;
+}

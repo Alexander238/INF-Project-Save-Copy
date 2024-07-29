@@ -1,0 +1,55 @@
+.picture {
+    flex-basis: 75%;
+    position: relative;
+}
+
+.picture img {
+    width: 100%;
+    height: auto;
+}
+
+.names {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: bold;
+    opacity: 0.6;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.names div {
+    position: absolute;
+    font-family: "Papyrus", fantasy !important;
+}
+
+.names div a {
+    font-family: "Papyrus", fantasy !important;
+    text-decoration: underline;
+}
+
+/* 918 */
+
+.names .first {
+    left: 9%;
+}
+.names .second {
+    left: 26%;
+}
+.names .third {
+    left: 41%;
+}
+.names .fourth {
+    left: 57%;
+}
+.names .fifth {
+    left: 71%;
+}
+.names .sixth {
+    left: 85%;
+}

@@ -1,0 +1,97 @@
+.chart {
+    width: 80%;
+    height: fit-content;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.legend > label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.legend .label1 {
+    color: rgb(192, 75, 75);
+}
+.legend .label2 {
+    color: rgb(75, 192, 75);
+}
+.legend .label3 {
+    color: rgb(75, 75, 192);
+}
+
+
+.chart > .no-data {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.backButton {
+    width: 100px;
+    height: 50px;
+}
+
+#tableWrapper,
+#single-websites-wrapper {
+    margin-top: 20px;
+}
+
+/** Datatable adjustments for single website view **/
+.dt-length,
+.dt-info,
+.dt-paging {
+    display: none;
+}
+
+/** API-Buttons **/
+.api-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+
+    border: 1px solid var(--datatable-border-color);
+}
+
+.button {
+    min-width: 71px;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    font-weight: 800;
+    font-family: sans-serif serif;
+    border: 1px solid black;
+    border-radius: var(--radius-small);
+    padding: 4px 6px;
+    cursor: pointer;
+}
+.button.api-button {
+    cursor: auto;
+}
+
+.button.disabled {
+    background-color: grey !important;
+    color: white !important;
+    cursor: auto;
+}
+
+.button.red {
+    background-color: red !important;
+    color: white !important;
+}
+
+.button.green {
+    background-color: green !important;
+    color: white !important;
+}
+
+.api-text {
+    color: var(--text-color);
+    opacity: 0.6;
+}
+

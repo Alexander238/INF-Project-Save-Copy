@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUMI Dashboard</title>
+    <link rel="stylesheet" href="../CSS/navigation.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/userInteractions.css">
+    <link rel="stylesheet" href="../CSS/mainContainer.css">
+    <link rel="stylesheet" href="../CSS/graphics.css">
+    <link rel="stylesheet" href="../CSS/globalVariables.css">
+    <link rel="stylesheet" href="../CSS/mainStyles.css">
+    <link rel="stylesheet" href="../CSS/darkMode.css">
+    <link rel="stylesheet" href="../CSS/vergleichZugriffe.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../JS/datatables.js"></script>
+    <link rel="stylesheet" href="../CSS/datatables.min.css">
+    <link rel="stylesheet" href="../CSS/datatableAdjustmentForJUMI.css">
+    <link rel="stylesheet" href="../CSS/mainPage.css">
+</head>
+<body class="white">
+<div id="blurry-background" class="blurry-background"></div>
+<div class="container">
+    <div class="nav-bar"></div>
+    <div class="main-box">
+        <div class="button-container">
+            <div class="search-container">
+                <input id="search-bar" type="search" placeholder="Suche nach Website..." class="search-bar">
+                <button id="search-button" class="search-button">Los</button>
+            </div>
+            <div id="top-select-wrapper" class="topSelect-wrapper">
+                <button id="toggle-top-select">Top 5</button>
+                <div class="button-arrow">&#9660;</div>
+                <div id="top-select" class="top-select">
+                    <button value="5">Top 5</button>
+                    <button value="10">Top 10</button>
+                    <button value="30">Top 30</button>
+                    <button value="50">Top 50</button>
+                    <button value="100">Top 100</button>
+                </div>
+            </div>
+            <div id="timeframe-wrapper" class="timeframe-wrapper">
+                <button id="toggle-timeframe">Zeitraum</button>
+                <div class="button-arrow">&#9660;</div>
+                <div id="timeframe" class="timeframe">
+                    <span>Von:</span>
+                    <select id="start-year" class="timeframe-select"></select>
+                    <select id="month-select-start" class="timeframe-select">
+                        <option value="01">Januar</option>
+                        <option value="02">Februar</option>
+                        <option value="03">März</option>
+                        <option value="04">April</option>
+                        <option value="05">Mai</option>
+                        <option value="06">Juni</option>
+                        <option value="07">Juli</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">Oktober</option>
+                        <option value="11">November</option>
+                        <option value="12">Dezember</option>
+                    </select>
+                    <span>Bis:</span>
+                    <select id="end-year" class="timeframe-select"></select>
+                    <select id="month-select-end" class="timeframe-select">
+                        <option value="01">Januar</option>
+                        <option value="02">Februar</option>
+                        <option value="03">März</option>
+                        <option value="04">April</option>
+                        <option value="05">Mai</option>
+                        <option value="06">Juni</option>
+                        <option value="07">Juli</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">Oktober</option>
+                        <option value="11">November</option>
+                        <option value="12">Dezember</option>
+                    </select>
+                    <button id="filter-button" class="timeframe-select">Filter anwenden</button>
+                </div>
+            </div>
+            <div id="toggle-type" class="toggle-type">
+                <button id="toggle-accesses" class="btn active">Zugriffe</button>
+                <button id="toggle-traffic" class="btn">Verkehr</button>
+            </div>
+            <div id="toggle-security" class="toggle-type">
+                <button id="toggle-safe" class="btn">Sicher</button>
+                <button id="toggle-na" class="btn">N/A</button>
+                <button id="toggle-unsafe" class="btn">Unsicher</button>
+            </div>
+            <div id="toggle-acknowledgement" class="toggle-type">
+                <button id="toggle-acknowledged" class="btn">Wahrgenommen</button>
+                <button id="toggle-unacknowledged" class="btn">Nicht Wahrgenommen</button>
+            </div>
+        </div>
+        <div id="active-filter-wrapper" class="active-filter-wrapper"></div>
+        <div id="diagram-list-container" class="diagram-list-container">
+            <div id="toptabelleTitle" class="title"></div>
+            <div id="chartDiv">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div id="tableWrapper"></div>
+        </div>
+        <div id="new-websites-wrapper" class="diagram-list-container"></div>
+        <button id="download-pdf" class="btn">Als PDF exportieren</button>
+        <button id="download-csv" class="btn">Als CSV exportieren</button>
+        <div class="vertical-spacer"></div>
+        <footer class="footer"></footer>
+    </div>
+    <div id="loginModal" class="modal"></div>
+    <div id="uploadModal" class="modal"></div>
+</div>
+<script type="module" src="../JS/index.js" defer></script>
+<script type="module" src="../JS/mainPage.js" defer></script>
+<script src="../JS/handler.js" type="module"></script>
+<script type="module" src="../JS/exportFunctions.js" defer></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</body>
+</html>

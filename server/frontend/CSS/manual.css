@@ -1,0 +1,20 @@
+.manual-content {
+    width: 100%;
+    background-color: var(--primary-color);
+    flex-basis: 100%;
+    padding: 50px 100px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.manual-content h1 {
+    text-align: center;
+}
+
+.manual-content h2 {
+    margin-top: 50px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px var(--text-color);
+}

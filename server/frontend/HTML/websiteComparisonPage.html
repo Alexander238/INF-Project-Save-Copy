@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vergleichen</title>
+    <link rel="stylesheet" href="../CSS/navigation.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/userInteractions.css">
+    <link rel="stylesheet" href="../CSS/mainContainer.css">
+    <link rel="stylesheet" href="../CSS/graphics.css">
+    <link rel="stylesheet" href="../CSS/globalVariables.css">
+    <link rel="stylesheet" href="../CSS/mainStyles.css">
+    <link rel="stylesheet" href="../CSS/datatableAdjustmentForJUMI.css">
+    <link rel="stylesheet" href="../CSS/websiteComparisonPage.css">
+    <link rel="stylesheet" href="../CSS/darkMode.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../JS/datatables.min.js"></script>
+    <link rel="stylesheet" href="../CSS/datatables.min.css" >
+</head>
+<body class="white">
+    <div class="container">
+        <div class="nav-bar"></div>
+
+        <div class="main-box">
+            <div id="tableWrapper"></div>
+
+            <div id="versus-wrapper">
+                <div class="versus-single-wrapper">
+                    <div class="versus-element" id="v1-element">
+                        Bitte auswählen
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropBtn" id="v1-btn">Datum</button>
+                        <div class="dropdown-content" id="v1-dropdown-content"></div>
+                    </div>
+                </div>
+                <label id="versus-label"> vs </label>
+                <div class="versus-single-wrapper">
+                    <div class="versus-element" id="v2-element">
+                        Bitte auswählen
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropBtn" id="v2-btn">Datum</button>
+                        <div class="dropdown-content" id="v2-dropdown-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="comparison-wrapper" class="hidden">
+                <div class="comparison-row">
+                    <div class="comparison-title">TITEL</div>
+                    <div class="comparison-row-elements">
+                        <div class="comparison-row-element">This</div>
+                        <div class="comparison-percentage">> 10%</div>
+                        <div class="comparison-row-element">That</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="compareChartDiv" class="diagram-list-container hidden">
+                <canvas id="compareChartAccesses"></canvas>
+            </div>
+
+            <div class="vertical-spacer"></div>
+
+            <div class="footer"></div>
+
+            <div id="loginModal" class="modal"></div>
+            <div id="uploadModal" class="modal"></div>
+        </div>
+    </div>
+</body>
+
+<script src="../JS/handler.js" type="module"></script>
+<script type="module" src="../JS/websiteComparisonPage.js"></script>
+
+</html>

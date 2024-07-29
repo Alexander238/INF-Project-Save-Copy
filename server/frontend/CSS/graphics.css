@@ -1,0 +1,35 @@
+.custom-button.with-image {
+    position: relative;
+}
+
+.custom-button.with-image img {
+    vertical-align: middle;
+    margin-right: 5px;
+    height: 20px;
+    filter: invert(55%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(130%) contrast(100%);
+}
+
+.left-image {
+    height: 30px;
+}
+
+.right-image {
+    height: 30px;
+}
+
+.nav-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#fh-img {
+    height: 60px;
+    width: 100px;
+}
+
+#jumi-img {
+    height: 60px;
+    width: 100px;
+}

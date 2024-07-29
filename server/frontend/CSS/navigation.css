@@ -1,0 +1,34 @@
+/*
+Navbar Logo
+*/
+
+.logo-box {
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+.logo-img {
+    margin: 10px;
+    height: 80px;
+    width: 80px;
+}
+
+.logo-text {
+    margin: 10px;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 2.2rem;
+
+    text-align: center;
+}
+
+.buttons {
+    width: 80%;
+}
+
+.buttons-bottom {
+    width: 80%;
+    margin-bottom: 20px;
+}

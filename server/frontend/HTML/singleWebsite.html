@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Website</title>
+    <link rel="stylesheet" href="../CSS/navigation.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/userInteractions.css">
+    <link rel="stylesheet" href="../CSS/mainContainer.css">
+    <link rel="stylesheet" href="../CSS/graphics.css">
+    <link rel="stylesheet" href="../CSS/globalVariables.css">
+    <link rel="stylesheet" href="../CSS/mainStyles.css">
+    <link rel="stylesheet" href="../CSS/darkMode.css">
+    <link rel="stylesheet" href="../CSS/singleWebsite.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../JS/datatables.js"></script>
+    <link rel="stylesheet" href="../CSS/datatables.min.css">
+    <link rel="stylesheet" href="../CSS/datatableAdjustmentForJUMI.css">
+</head>
+<body class="white">
+<div class="container">
+    <div class="nav-bar"></div>
+
+    <div class="main-box">
+        <div class="button-container">
+            <div id="backButton" class="backButton btn">&#9666; zurück</div>
+            <div class="search-container">
+                <input id="search-bar" type="search" placeholder="Suche nach Website..." class="search-bar">
+                <button id="search-button" class="search-button">Los</button>
+            </div>
+        </div>
+        <div id="single-websites-wrapper" class="diagram-list-container">
+            <div id="single-website-title" class="title">Website Title</div>
+            <div id="single-website-chartDiv" class="chart">
+                <div class="legend">
+                    <label class="label1">
+                        <input type="checkbox" id="dataset1" checked>
+                        Zugriffe
+                    </label>
+                    <label class="label2">
+                        <input type="checkbox" id="dataset2" checked>
+                        Verkehr in GB
+                    </label>
+                    <label class="label3">
+                    <input type="checkbox" id="dataset3" checked>
+                        Durchschnittliche Nutzer
+                    </label>
+                </div>
+                <canvas id="single-website-chart"></canvas>
+                <div id="tableWrapper"></div>
+                <div id="api-info" class="api-info">
+                    <button class="button api-button" id="api-button">CHECK</button>
+                    <button class="button details-button disabled" id="details-button" disabled="true">DETAILS</button>
+                    <p class="api-text"><span class="api-text-span">letzte Prüfung: <br>-</span></p>
+                </div>
+            </div>
+        </div>
+        <button id="download-pdf" class="btn">Als PDF exportieren</button>
+        <button id="download-csv" class="btn">Als CSV exportieren</button>
+        <div id="vertical-main-spacer"></div>
+
+        <div class="footer"></div>
+    </div>
+
+    <div id="loginModal" class="modal"></div>
+    <div id="uploadModal" class="modal"></div>
+
+    <!-- Scan-Results -->
+    <div id="resultAPIModal" class="modalAPI" style="display: none;">
+        <div class="modalAPI-content">
+            <span class="closeAPI-button">&times;</span>
+            <h2>Analyse Ergebnis</h2>
+            <pre id="scanResultContent"></pre>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="module" src="../JS/index.js" defer></script>
+<script type="module" src="../JS/singleWebsite.js" defer></script>
+<script src="../JS/handler.js" type="module"></script>
+
+</html>

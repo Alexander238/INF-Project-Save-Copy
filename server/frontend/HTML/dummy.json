@@ -1,0 +1,40 @@
+{
+  "sums": {
+    "accesses": 1000,
+    "traffic": 5000
+  },
+  "accesses": [
+    {
+      "accesses": 500,
+      "url": "http://example.com/page1",
+      "date": "2024-04-01"
+    },
+    {
+      "accesses": 300,
+      "url": "http://example.com/page2",
+      "date": "2024-04-02"
+    },
+    {
+      "accesses": 200,
+      "url": "http://example.com/page3",
+      "date": "2024-04-03"
+    }
+  ],
+  "traffic": [
+    {
+      "traffic": 3000,
+      "url": "http://example.com/page1",
+      "date": "2024-04-01"
+    },
+    {
+      "traffic": 1500,
+      "url": "http://example.com/page2",
+      "date": "2024-04-02"
+    },
+    {
+      "traffic": 500,
+      "url": "http://example.com/page3",
+      "date": "2024-04-03"
+    }
+  ]
+}

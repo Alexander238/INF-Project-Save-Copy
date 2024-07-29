@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verwalten</title>
+    <link rel="stylesheet" href="../CSS/navigation.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/userInteractions.css">
+    <link rel="stylesheet" href="../CSS/mainContainer.css">
+    <link rel="stylesheet" href="../CSS/graphics.css">
+    <link rel="stylesheet" href="../CSS/globalVariables.css">
+    <link rel="stylesheet" href="../CSS/mainStyles.css">
+    <link rel="stylesheet" href="../CSS/websiteManagementPage.css">
+    <link rel="stylesheet" href="../CSS/datatableAdjustmentForJUMI.css">
+    <link rel="stylesheet" href="../CSS/darkMode.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="../JS/datatables.min.js"></script>
+    <link href="../CSS/datatables.min.css" rel="stylesheet">
+</head>
+<body class="white">
+
+<div class="container">
+    <div class="nav-bar"></div>
+
+    <div class="main-box">
+        <div id="other-filter">
+            <div class="filter-label"> Filter </div>
+
+            <div class="isSave-wrapper">
+                <div id="isSave-filter-label"> Sicherheitsgrad </div>
+                <div id="isSave-filter-wrapper"></div>
+            </div>
+            <div class="isAcknowledged-wrapper">
+                <div id="isAcknowledged-filter-label"> Wurde Wahrgenommen </div>
+                <div id="isAcknowledged-filter-wrapper"></div>
+            </div>
+
+            <div class="filter-label" id="functions-label"> Funktionen </div>
+            <div id="ack-all-wrapper">
+                <button id="ack-all-btn"> Angezeigte Websites zur Kenntnis nehmen </button>
+                <button id="api-all-sites"> Angezeigte Websites per API prüfen </button>
+            </div>
+
+            <div id="delete-file-wrapper">
+                <div id="delete-file-border-wrapper">
+                    <div id="year-month-select-wrapper">
+                        <label for="year"></label>
+                        <select id="year" class="timeframe-select"></select>
+
+                        <label for="month-select"></label>
+                        <select id="month-select" class="timeframe-select">
+                            <option value="01">Januar</option>
+                            <option value="02">Februar</option>
+                            <option value="03">März</option>
+                            <option value="04">April</option>
+                            <option value="05">Mai</option>
+                            <option value="06">Juni</option>
+                            <option value="07">Juli</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">Oktober</option>
+                            <option value="11">November</option>
+                            <option value="12">Dezember</option>
+                        </select>
+                    </div>
+                    <button id="delete-entry-button"> Datei löschen </button>
+                </div>
+            </div>
+
+            <div id="row-toggle-wrapper">
+                <div id="column-toggle-label"> Ein/Ausblenden: </div>
+                <a class="toggle-visibility column-toggled-true" data-column="0">URL</a>
+                <span class="horizontal-spacer">|</span>
+                <a class="toggle-visibility column-toggled-true" data-column="1">Erstauftreten</a>
+                <span class="horizontal-spacer">|</span>
+                <a class="toggle-visibility column-toggled-true" data-column="2">Sicherheitsstatus</a>
+                <span class="horizontal-spacer">|</span>
+                <a class="toggle-visibility column-toggled-true" data-column="3">Wahrgenommen</a>
+                <span class="horizontal-spacer">|</span>
+                <a class="toggle-visibility column-toggled-true" data-column="4">API-Prüfung</a>
+                <span class="horizontal-spacer">|</span>
+                <a class="toggle-visibility column-toggled-true" data-column="5">Kommentar</a>
+            </div>
+        </div>
+
+        <div id="tableWrapper"></div>
+
+        <div class="footer"></div>
+
+        <div id="loginModal" class="modal"> </div>
+        <div id="uploadModal" class="modal"></div>
+    </div>
+</div>
+
+<div id="loadingOverlay" class="loading-overlay" style="display: none;">
+    <div class="loader"></div>
+    <div id="loadingTimer"></div>
+    <p>API Check wird durchgeführt...</p>
+</div>
+
+<div id="allWebsitesLoadingOverlay" style="display: none;">
+    <div class="overlay-content">
+        <span id="allWebsitesLoadingTimer">0</span> Sekunden verbleibend<br>API-Check für alle angezeigten Websites läuft</br>
+        <button id="cancel-all-websites-check">Abbrechen</button>
+    </div>
+</div>
+
+<!-- Scan-Results -->
+<div id="resultAPIModal" class="modalAPI" style="display: none;">
+    <div class="modalAPI-content">
+        <span class="closeAPI-button">&times;</span>
+        <h2>Analyse Ergebnis</h2>
+        <pre id="scanResultContent"></pre>
+    </div>
+</div>
+
+</body>
+
+<script src="../JS/handler.js" type="module"></script>
+<script type="module" src="../JS/datatableJUMIBasicSetup.js"></script>
+<script type="module" src="../JS/websiteManagementPage.js"></script>
+
+</body>
+
+<script src="../JS/handler.js" type="module"></script>
+<script type="module" src="../JS/datatableJUMIBasicSetup.js"></script>
+<script type="module" src="../JS/websiteManagementPage.js"></script>
+
+</html>

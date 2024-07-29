@@ -1,0 +1,219 @@
+#tableWrapper {
+    flex-basis: 100%;
+}
+
+#versus-wrapper {
+    flex-basis: 100%;
+    margin: 3% 0 0 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#versus-label {
+    flex: 0 0 15%;
+    text-align: center;
+
+    font-size: 30px;
+    color: var(--title-color);
+}
+
+.versus-single-wrapper {
+    flex: 0 0 40%;
+    position: relative;
+}
+
+.versus-element {
+    position: relative;
+
+    text-align: center;
+    overflow: auto;
+
+    /* border: 2px solid black; */
+    border-radius: var(--radius-normal);
+    background-color: var(--primary-color);
+
+    z-index: 11;
+    padding: 20px 0;
+}
+
+.close-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+
+    width: 24px;
+    height: 24px;
+
+    background-image: url('../assets/cancle-cross.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: transparent;
+
+    border: none;
+    cursor: pointer;
+}
+
+#comparison-wrapper {
+    flex-basis: 100%;
+
+    border-radius: var(--radius-normal);
+
+    margin: 3% 0;
+    padding: 10px;
+    background-color: var(--primary-color);
+}
+
+.comparison-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid #0000;
+    --_w: 3px;
+    --_g: #0000 90deg, black 0;
+    --_p: 100% 3px border-box no-repeat;
+    background:
+            conic-gradient(from 90deg  at top    var(--_w) left  var(--_w),var(--_g)) 0    0    / var(--_p),
+            conic-gradient(from 180deg at top    var(--_w) right var(--_w),var(--_g)) 100% 0    / var(--_p),
+            conic-gradient(from 0deg   at bottom var(--_w) left  var(--_w),var(--_g)) 0    100% / var(--_p),
+            conic-gradient(from -90deg at bottom var(--_w) right var(--_w),var(--_g)) 100% 100% / var(--_p);
+    background-color: var(--type2-primary-color);
+    border-radius: var(--radius-normal);
+
+    margin: 10px 0 30px 0;
+    padding: 10px 0;
+}
+
+.comparison-title {
+    text-align: center;
+    font-weight: bold;
+    color: var(--title-color);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.comparison-row-elements {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.comparison-percentage {
+    flex: 0 0 15%;
+    text-align: center;
+}
+
+.comparison-row-element {
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+.dropBtn {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    font-weight: bold;
+
+    margin: 0;
+    padding: 10px 0 0;
+
+    border-radius: 0 0 var(--radius-normal) var(--radius-normal);
+
+    width: 80px;
+
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+    position: relative;
+    top: -10px;
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.dropdown {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+
+    padding: 0 0 20px 0;
+    margin: 0;
+
+    /*overflow-y: auto;
+    overflow-x: hidden;*/
+
+    background: transparent;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: var(--button-color);
+    width: 200px;
+    color: var(--button-text-color);
+    z-index: 100;
+
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.dropdown-content a {
+    color: var(--button-text-color);
+    padding: 4px 18px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--button-hover);
+    color: var(--button-text-hover-color);
+}
+
+.dropdown.has-children:hover .dropdown-content {
+    display: block;
+}
+
+.add-btn {
+    position: relative;
+
+    width: 100%;
+    padding: 4px 2px;
+
+    border: none;
+    border-radius: 2px;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+
+    cursor: pointer;
+    transition: .4s;
+}
+
+.add-btn:hover {
+    background-color: var(--button-hover);
+    box-shadow: 0 0 6px black;
+    color: white;
+
+    transition: 0s;
+}
+
+.add-btn:active {
+    background: lightgray;
+    color: black;
+    box-shadow: 0 0 6px white;
+
+    transition: 0s;
+}
+
+.dropBtn.hidden {
+    visibility: hidden;
+}
+
+/*** Adjustments to datatables.min.css ***/
+
+.dataTable {
+    width: 100% !important;
+}
